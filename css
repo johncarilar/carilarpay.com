@@ -40,7 +40,7 @@ a:hover {
   color: #fff;
   background: url('https://raw.githubusercontent.com/johncarilar/carilarpay.com/main/images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  
   overflow: hidden;
 }
 
@@ -203,7 +203,7 @@ a:hover {
   padding: 60px 20px;
   background: url('https://raw.githubusercontent.com/johncarilar/carilarpay.com/main/images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  
   color: #222;
   position: relative;
 }
@@ -248,7 +248,7 @@ footer {
   /* Background image */
   background: url('https://raw.githubusercontent.com/johncarilar/carilarpay.com/main/images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+ 
   position: relative;
   z-index: 1;
 }
