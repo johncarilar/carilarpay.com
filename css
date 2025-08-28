@@ -38,7 +38,7 @@ a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
-  background: url('../images/brushing-finish-2.jpg') no-repeat center center;
+  background: url('images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
@@ -201,7 +201,7 @@ a:hover {
   font-family: 'Exo 2', sans-serif;
   width: 100%;
   padding: 60px 20px;
-  background: url('../images/brushing-finish-2.jpg') no-repeat center center;
+  background: url('images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   color: #222;
@@ -246,7 +246,7 @@ footer {
   -webkit-text-fill-color: transparent;
   display: inline-block; /* ensures gradient fills text properly */
   /* Background image */
-  background: url('../images/brushing-finish-2.jpg') no-repeat center center;
+  background: url('images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
