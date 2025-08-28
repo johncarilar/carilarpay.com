@@ -1,0 +1,541 @@
+function toggleInput(option) {
+    document.getElementById('emailInput').style.display = (option === 'email') ? 'block' : 'none';
+    document.getElementById('phoneInput').style.display = (option === 'phone') ? 'block' : 'none';
+  }
+  function toggleInput(method) {
+    // Show the hidden section
+    document.getElementById('contactDetails').style.display = 'block';
+  
+    // Hide both fields first
+    document.getElementById('emailInput').classList.add('hidden');
+    document.getElementById('phoneInput').classList.add('hidden');
+  
+    // Show relevant field
+    if (method === 'email') {
+      document.getElementById('emailInput').classList.remove('hidden');
+    } else if (method === 'phone') {
+      document.getElementById('phoneInput').classList.remove('hidden');
+    }
+  }
+  document.getElementById('showEmail').addEventListener('click', () => {
+    document.querySelector('.hidden-section').style.display = 'block';
+    document.getElementById('emailInput').classList.remove('hidden');
+    document.getElementById('phoneInput').classList.add('hidden');
+  });
+  
+  document.getElementById('showPhone').addEventListener('click', () => {
+    document.querySelector('.hidden-section').style.display = 'block';
+    document.getElementById('phoneInput').classList.remove('hidden');
+    document.getElementById('emailInput').classList.add('hidden');
+  });
+  // Flip card when scrolling to a certain point
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const flipCard = document.querySelector('.flip-card');
+  
+    if (flipCard) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add the flipped class when the card is in view
+            flipCard.classList.add('flipped');
+  
+            // Stop observing so it only flips once
+            observer.unobserve(flipCard);
+          }
+        });
+      }, { threshold: 0.5 }); // 50% of the element must be visible
+  
+      observer.observe(flipCard);
+    }
+  });
+  
+
+
+
+/* ========================
+   Global Styles
+======================== */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: #fff;
+}
+
+a {
+  color: #f5f4f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Hero Section
+======================== */
+#hero {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: url('../png files/brushing-finish-2.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Foreground Image (Card) */
+.hero-image {
+  position: relative;
+  max-width: 60%;
+  height: auto;
+  z-index: 1;
+}
+
+/* Neon Title (CARILAR) - on top portion of card */
+.hero-title {
+  position: absolute;
+  top: 15%; /* higher on the card */
+  font-family: 'Neuropol X', sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0.5em;
+  color: #ff007f;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Base permanent glow */
+  text-shadow:
+      0 0 10px #ff007f,
+      0 0 20px #ff007f,
+      0 0 40px #ff007f,
+      0 0 80px #ff007f;
+  
+  /* Flicker animation on top */
+  animation: flickerGlow 4s ease infinite;
+}
+
+/* Flicker animation: vary opacity and extra sparkles */
+@keyframes flickerGlow {
+  0%, 10%, 30%, 50%, 70%, 90% { 
+      opacity: 0.8;
+      text-shadow:
+          0 0 10px #ff007f,
+          0 0 20px #ff007f,
+          0 0 40px #ff007f,
+          0 0 80px #ff007f;
+  }
+  15%, 35%, 55%, 75%, 95% { 
+      opacity: 1;
+      text-shadow:
+          0 0 12px #ff007f,
+          0 0 24px #ff007f,
+          0 0 48px #ff007f,
+          0 0 96px #ff007f;
+  }
+  100% { 
+      opacity: 1;
+      text-shadow:
+          0 0 10px #ff007f,
+          0 0 20px #ff007f,
+          0 0 40px #ff007f,
+          0 0 80px #ff007f;
+  }
+}
+
+/* Subtitles Container - start in center of card */
+.hero-subtitles {
+  position: absolute;
+  top: 40%;                  
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* extra spacing */
+  width: 100%;
+  align-items: center; /* center horizontally */
+}
+
+/* Subtitle Neon Style */
+.hero-subtitle {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2.5rem;
+  color: rgba(166,254,255,255);
+  opacity: 0;
+  text-shadow:
+      0 0 5px #bcf7f8,
+      0 0 10px #54cdd1,
+      0 0 20px #36b2b3,
+      0 0 40px #105f6e;
+  animation: fadeInNeon 1.5s forwards;
+}
+
+/* Adjust animation delays for each line */
+.line1 { animation-delay: 2s; }
+.line2 { animation-delay: 3s; }
+.line3 { animation-delay: 4s; }
+
+/* Fade-in neon animation */
+@keyframes fadeInNeon {
+  from {
+      opacity: 0;
+      text-shadow: none;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      text-shadow:
+      0 0 5px #bcf7f8,
+      0 0 10px #54cdd1,
+      0 0 20px #36b2b3,
+      0 0 40px #105f6e;
+      transform: translateY(0);
+  }
+}
+/* Flip Card Container */
+.flip-card {
+  perspective: 1500px; /* Enables 3D effect */
+  width: 60%; 
+  max-width: 800px;
+  margin: 0 auto 100px auto; /* center and spacing */
+  position: relative;
+}
+
+/* Flip Card Inner */
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Front */
+.flip-card-front {
+  z-index: 2;
+}
+
+/* Back */
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #fff; /* or same background as About Us section */
+  padding: 60px 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Flip effect when scrolled */
+.flip-card.flipped .flip-card-front {
+  transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-back {
+  transform: rotateY(0deg);
+}
+
+/* ========================
+   Mobile Responsive Hero
+======================== */
+@media (max-width: 768px) {
+  #hero {
+    height: 80vh;
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: 0.2em;
+    top: 10%;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  .hero-image {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-image {
+    max-width: 90%;
+  }
+}
+
+
+/* ========================
+   Sections Font & Background
+======================== */
+#about, #partners, #clients, #contact, footer {
+  font-family: 'Exo 2', sans-serif;
+  width: 100%;
+  padding: 60px 20px;
+  background: url('../png files/brushing-finish-2.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
+  position: relative;
+}
+
+/* Gradient for section titles */
+section h2, section h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: inline-block;
+
+  /* Gradient Text */
+  background: linear-gradient(to right, #ff9862, #b93769);
+  background-size: 100%;  /* extend the gradient horizontally */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section p {
+  /* gradient text for paragraphs in sections */
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #ff9862, #b93769);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+footer {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff9862, #b93769);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* ensures gradient fills text properly */
+  /* Background image */
+  background: url('../png files/brushing-finish-2.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient text inside footer */
+footer p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ff9862, #b93769);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* ensures gradient fills text properly */
+}
+/* Hidden section for inputs */
+.hidden-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.hidden-section input {
+  width: 280px;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ff9862;
+  background: transparent;
+  color: #f5f5dc; /* Cream white text */
+  font-size: 1rem;
+  text-align: center;
+}
+
+.hidden-section input::placeholder {
+  color: #f5f5dc;
+  opacity: 0.7;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 15px;
+}
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #ff9862, #b93769);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px) scale(1.2);
+  background: linear-gradient(135deg, #b93769, #ff9862);
+}
+
+/* Inputs with transparent background and cream text */
+.input-group input {
+  width: 300px; /* smaller width */
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: transparent; /* transparent background */
+  color: #f5f5dc; /* cream white text */
+  text-align: center; /* center text inside */
+  transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #f5f5dc; /* cream white placeholder */
+  opacity: 0.7;
+}
+
+.input-group input:focus {
+  border-color: #ff6b6b;
+}
+
+/* Submit button styling */
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5a623, #ff6b6b);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #ff6b6b, #f5a623);
+}
+
+.send-arrow {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+/* Hidden class for email/phone toggle */
+.hidden {
+  display: none;
+}
+.partners-list, 
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Vertical alignment */
+  gap: 20px; /* space between logos */
+  padding: 20px;
+}
+ 
+.partners-list img {
+  max-width: 180px;
+  max-height: 150px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.socials-list img  {
+  max-height: 50px;   /* controls logo size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-container a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.logo-container a:hover img {
+  transform: scale(1.2); /* Bubble up */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Optional shadow for pop effect */
+}
+.partners-list a img,
+.socials-list a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partners-list a:hover img,
+.socials-list a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* space between logos */
+  padding: 20px;
+}
+
+.client-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  text-decoration: none;
+}
+
+.client-list a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-list a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
