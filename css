@@ -151,49 +151,6 @@ a:hover {
       transform: translateY(0);
   }
 }
-/* Flip Card Container */
-.flip-card {
-  perspective: 1500px; /* Enables 3D effect */
-  width: 60%; 
-  max-width: 800px;
-  margin: 0 auto 100px auto; /* center and spacing */
-  position: relative;
-}
-
-/* Flip Card Inner */
-.flip-card-front,
-.flip-card-back {
-  width: 100%;
-  backface-visibility: hidden;
-  transition: transform 1s ease-in-out;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Front */
-.flip-card-front {
-  z-index: 2;
-}
-
-/* Back */
-.flip-card-back {
-  transform: rotateY(180deg);
-  background-color: #fff; /* or same background as About Us section */
-  padding: 60px 20px;
-  color: #222;
-  text-align: center;
-}
-
-/* Flip effect when scrolled */
-.flip-card.flipped .flip-card-front {
-  transform: rotateY(180deg);
-}
-
-.flip-card.flipped .flip-card-back {
-  transform: rotateY(0deg);
-}
 
 /* ========================
    Mobile Responsive Hero
