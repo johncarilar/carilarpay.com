@@ -106,7 +106,7 @@ footer p {
   position: relative;
   width: 90%;         /* bigger so card is obvious */
   max-width: 900px;   /* keeps it from being massive */
-  min-width: 280px
+  min-width: 280px;
   aspect-ratio: 16 / 9;
 }
 
