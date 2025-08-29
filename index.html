@@ -103,26 +103,34 @@
       </a>
     </div>
 
-  <!-- CONTACT FORM -->
-  <form id="contactForm"  action="https://formsubmit.co/carilarpay@gmail.com" method="POST">
-    <h3>How can we reach you?</h3>
-  
-    <!-- Option Buttons -->
-    <div class="contact-options">
-      <button type="button" class="contact-btn" id="showEmail">Email</button>
-      <button type="button" class="contact-btn" id="showPhone">Phone</button>
-    </div>
-  
-    <!-- Input Section -->
-    <div class="hidden-section" style="display: none;">
-      <button type="button" id= "backbtn" class="backbtn" ><span class="arrow">← </span>Back </button>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="emailInput" name="email" placeholder="Your Email" class="hidden">
-      <input type="tel" id="phoneInput" name="phone" placeholder="Your Phone Number" class="hidden">
-      <button type="submit" class="submit-btn">Submit <span class="arrow">➔</span></button>
-    </div>    
-  </form>
-  
+<form id="contactForm" action="https://formsubmit.co/carilarpay@gmail.com" method="POST">
+  <h3>How can we reach you?</h3>
+
+  <!-- Option Buttons -->
+  <div class="contact-options">
+    <button type="button" class="contact-btn" id="showEmail">Email</button>
+    <button type="button" class="contact-btn" id="showPhone">Phone</button>
+  </div>
+
+  <!-- Input Section -->
+  <div class="hidden-section" style="display: none;">
+    <button type="button" id="backbtn" class="backbtn">
+      <span class="arrow">← </span>Back
+    </button>
+
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="emailInput" name="email" placeholder="Your Email" class="hidden">
+    <input type="tel" id="phoneInput" name="phone" placeholder="Your Phone Number" class="hidden">
+
+    <!-- FormSubmit redirect and spam protection -->
+    <input type="hidden" name="_next" value="https://username.github.io/repository-name/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="submit-btn">
+      Submit <span class="arrow">➔</span>
+    </button>
+  </div>
+</form>
 
   
 
