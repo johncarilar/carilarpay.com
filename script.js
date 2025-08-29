@@ -1,7 +1,7 @@
 // ===== Elements =====
 const showEmailBtn = document.getElementById('showEmail');
 const showPhoneBtn = document.getElementById('showPhone');
-const backbtn = document.getElementById('backbtn');
+const backBtn = document.getElementById('backbtn');
 const contactOptions = document.querySelector('.contact-options');
 const hiddenSection = document.querySelector('.hidden-section');
 const emailInput = document.getElementById('emailInput');
@@ -10,8 +10,14 @@ const contactForm = document.getElementById('contactForm');
 
 // ===== Functions =====
 function showInput(type) {
-  contactOptions.style.display = 'none'; // hide buttons
-  hiddenSection.style.display = 'block';  // show inputs
+  contactOptions.style.display = 'none';    // hide email/phone buttons
+  hiddenSection.style.display = 'flex';     // show input section
+  hiddenSection.style.flexDirection = 'row'; // keep inputs horizontal
+  hiddenSection.style.flexWrap = 'wrap';
+  hiddenSection.style.justifyContent = 'center';
+  hiddenSection.style.alignItems = 'center';
+
+  // Show correct input and hide the other
   if (type === 'email') {
     emailInput.classList.remove('hidden');
     phoneInput.classList.add('hidden');
@@ -22,8 +28,8 @@ function showInput(type) {
 }
 
 function goBack() {
-  hiddenSection.style.display = 'none';   // hide inputs
-  contactOptions.style.display = 'block';  // show buttons
+  hiddenSection.style.display = 'none';  // hide inputs
+  contactOptions.style.display = 'flex'; // show buttons
   emailInput.classList.add('hidden');
   phoneInput.classList.add('hidden');
 }
@@ -31,11 +37,10 @@ function goBack() {
 // ===== Event Listeners =====
 showEmailBtn.addEventListener('click', () => showInput('email'));
 showPhoneBtn.addEventListener('click', () => showInput('phone'));
-backbtn.addEventListener('click', goBack);
+backBtn.addEventListener('click', goBack);
 
+// ===== Optional: local form validation (FormSubmit handles actual submission) =====
 contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-
   const name = document.getElementById('name').value.trim();
   let contactValue = '';
 
@@ -46,11 +51,8 @@ contactForm.addEventListener('submit', function(e) {
   }
 
   if (!name || !contactValue) {
+    e.preventDefault(); // stop form submission
     alert('Please fill out all required fields.');
-    return;
   }
-
-  // Redirect to Thank You page
-  window.location.href = 'thankyou.html';
+  // Otherwise, form submits to FormSubmit and redirects via _next hidden field
 });
-
