@@ -10,26 +10,26 @@ const contactForm = document.getElementById('contactForm');
 
 // ===== Functions =====
 function showInput(type) {
-  contactOptions.style.display = 'none';    // hide email/phone buttons
-  hiddenSection.style.display = 'flex';     // show input section
-  hiddenSection.style.flexDirection = 'row'; // keep inputs horizontal
+  contactOptions.style.display = 'none';       // hide buttons
+  hiddenSection.style.display = 'flex';        // show input section
+  hiddenSection.style.flexDirection = 'row';   // keep inputs horizontal
   hiddenSection.style.flexWrap = 'wrap';
   hiddenSection.style.justifyContent = 'center';
   hiddenSection.style.alignItems = 'center';
 
-  // Show correct input and hide the other
+  // Show correct input
   if (type === 'email') {
     emailInput.classList.remove('hidden');
     phoneInput.classList.add('hidden');
-  } else if (type === 'phone') {
+  } else {
     phoneInput.classList.remove('hidden');
     emailInput.classList.add('hidden');
   }
 }
 
 function goBack() {
-  hiddenSection.style.display = 'none';  // hide inputs
-  contactOptions.style.display = 'flex'; // show buttons
+  hiddenSection.style.display = 'none';       // hide input section
+  contactOptions.style.display = 'flex';      // show buttons
   emailInput.classList.add('hidden');
   phoneInput.classList.add('hidden');
 }
@@ -39,7 +39,7 @@ showEmailBtn.addEventListener('click', () => showInput('email'));
 showPhoneBtn.addEventListener('click', () => showInput('phone'));
 backBtn.addEventListener('click', goBack);
 
-// ===== Optional: local form validation (FormSubmit handles actual submission) =====
+// ===== Form Validation =====
 contactForm.addEventListener('submit', function(e) {
   const name = document.getElementById('name').value.trim();
   let contactValue = '';
@@ -50,9 +50,10 @@ contactForm.addEventListener('submit', function(e) {
     contactValue = phoneInput.value.trim();
   }
 
+  // If any required field is empty, block submission
   if (!name || !contactValue) {
-    e.preventDefault(); // stop form submission
+    e.preventDefault();
     alert('Please fill out all required fields.');
   }
-  // Otherwise, form submits to FormSubmit and redirects via _next hidden field
+  // Otherwise, do NOT call preventDefault: FormSubmit handles submission
 });
