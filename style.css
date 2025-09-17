@@ -34,10 +34,10 @@ a:hover {
 /* ========================
    2. Layout & Sections
 ======================== */
-#about, #partners, #clients, #contact, footer {
+#about, #what, #partners, #clients, #contact, footer {
   font-family: 'Exo 2', sans-serif;
   width: 100%;
-  padding: 60px 20px;
+  padding: 30px;
   background: url('../images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -82,6 +82,30 @@ footer p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+#about, #what {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-overlay h2, .what-overlay h2 {
+  text-align: center;   /* centers the title */
+}
+.about-overlay p, .what-overlay p {
+  text-align: justify;     /* aligns paragraph left */
+}
+.about-container, .what-container { 
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay for readability */ 
+  align-items: center; 
+  padding: clamp(30px, 5vw, 60px); 
+  border-radius: 20px; 
+  max-width: 700px; 
+  width: 90%; /* ensures container shrinks on smaller screens */ 
 }
 
 /* ========================
@@ -134,9 +158,9 @@ footer p {
   top: 7%;   /* positioned near top of card */
   font-size: clamp(2rem, 8vw, 5rem); /* scales with card size */
   font-family: 'Neuropol X', sans-serif;
-  letter-spacing: 0.5em;
-  color: #ff007f;
-  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f, 0 0 80px #ff007f;
+  letter-spacing: 0.4em;
+  color: #fcfad9;
+  text-shadow: 0 0 10px #e24b0a, 0 0 20px #e24b0a, 0 0 40px #e24b0a, 0 0 80px #e24b0a;
   animation: flickerGlow 4s ease infinite;
 }
 
@@ -283,7 +307,6 @@ footer p {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px;
 }
 
 .partners-list img {
