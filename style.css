@@ -357,11 +357,33 @@ footer p {
    6. Responsive Media Queries
 ======================== */
 @media (max-width: 768px) {
-  #hero { height: 80vh; padding: 20px; }
-  .hero-title { font-size: clamp(1.2rem, 8vw, 2.5rem); letter-spacing: 0.3em; top: 15%; }
-  .hero-subtitle { font-size: clamp(0.7rem, 3.5vw, 1.2rem); margin: 5px 0; }
-  .hero-image { max-width: 80%; margin-bottom: 20px; }
-  .hero-card{width: 90%}
+  #hero { 
+     height: 80vh; 
+     padding: 20px; 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; 
+     text-align: center;
+  }
+  .hero-title { 
+     font-size: clamp(1.2rem, 8vw, 2.5rem); 
+     letter-spacing: 0.3em; 
+     top: auto; 
+     position: relative;
+  }
+  .hero-subtitle { 
+     font-size: clamp(0.7rem, 3.5vw, 1.2rem); 
+     margin: 5px 0; 
+  }
+  .hero-image { 
+     max-width: 80%; 
+     margin-bottom: 20px; 
+  }
+  .hero-card {
+     width: 90%
+     margin: 0 auto;
+  }
 }
 @media (max-width: 480px) {
   .hero-title { font-size: 2.5rem; letter-spacing: 0.15em; }
@@ -373,6 +395,7 @@ footer p {
     background-attachment: scroll; /* smoother, no grain */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat; 
   }
 }
 @media (max-width: 768px) {
