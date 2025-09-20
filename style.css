@@ -91,7 +91,7 @@ footer p {
   align-items: center;
   padding: 20px;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 .about-overlay h2, .merchant-overlay h2, .marketing-overlay h2 {
   text-align: center;   /* centers the title */
