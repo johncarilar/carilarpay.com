@@ -40,6 +40,8 @@ a:hover {
   padding: 30px;
   background: url('../images/brushing-finish-2.jpg') no-repeat center center;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: #222;
   position: relative;
@@ -85,7 +87,7 @@ footer p {
 }
 #about, #merchant, #marketing {
   width: 100%;
-  min-height: auto
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,8 +146,7 @@ footer p {
 }
 
 /* TITLE + SUBTITLES */
-.hero-title,
-.hero-subtitles {
+.hero-title, .hero-subtitles {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
