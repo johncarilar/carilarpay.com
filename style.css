@@ -34,7 +34,7 @@ a:hover {
 /* ========================
    2. Layout & Sections
 ======================== */
-#about, #what, #partners, #clients, #contact, footer {
+#about, #merchant, #marketing, #partners, #clients, #contact, footer {
   font-family: 'Exo 2', sans-serif;
   width: 100%;
   padding: 30px;
