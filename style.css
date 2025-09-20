@@ -367,6 +367,27 @@ footer p {
   .hero-subtitle { font-size: 0.9rem; }
   .hero-image { max-width: 90%; }
 }
+@media (max-width: 768px) {
+  #about, #merchant, #marketing, #partners, #clients, #contact, #footer {
+    background-attachment: scroll; /* smoother, no grain */
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 768px) {
+  #about, #merchant, #marketing, #partners {
+    padding: 10px; /* less vertical padding */
+  }
+}
+@media (max-width: 768px) {
+  section h2, section h3 {
+    font-size: 2rem; /* smaller headings for mobile */
+  }
+  section p {
+    font-size: 1.1rem; /* more readable on mobile */
+    line-height: 1.6;  /* improves readability */
+  }
+}
 /* ========================
    7. Thank You Page Section
 ======================== */
