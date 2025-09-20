@@ -358,7 +358,7 @@ footer p {
 ======================== */
 @media (max-width: 768px) {
   #hero { 
-     height: 80vh; 
+     height: 100vh; 
      padding: 20px; 
      display: flex;
      flex-direction: column;
@@ -367,22 +367,49 @@ footer p {
      text-align: center;
   }
   .hero-title { 
-     font-size: clamp(1.2rem, 8vw, 2.5rem); 
+     font-size: clamp(1.5rem, 6vw, 2rem); 
      letter-spacing: 0.3em; 
      top: auto; 
      position: relative;
+     margin-botton: 10px;
   }
   .hero-subtitle { 
-     font-size: clamp(0.7rem, 3.5vw, 1.2rem); 
+     font-size: clamp(0.9rem, 4vw, 1.2rem); 
      margin: 5px 0; 
+     line-height: 1.3;
   }
   .hero-image { 
      max-width: 80%; 
      margin-bottom: 20px; 
   }
   .hero-card {
-     width: 90%
+     background-size: contain;
+     width: 95%;
+     max-width: 600px;
+     aspect-ratio: 16/9;   /* keeps card shape consistent */
      margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 5%;
+  }
+   #about, #merchant, #marketing, #partners, #clients, #contact, #footer {
+    background-attachment: scroll; /* smoother, no grain */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+  }
+    #about, #merchant, #marketing, #partners {
+    padding: 10px; /* less vertical padding */
+  }
+    section h2, section h3 {
+    font-size: 2rem; /* smaller headings for mobile */
+  }
+  section p {
+    font-size: 1.1rem; /* more readable on mobile */
+    line-height: 1.6;  /* improves readability */
   }
 }
 @media (max-width: 480px) {
@@ -390,26 +417,15 @@ footer p {
   .hero-subtitle { font-size: 0.9rem; }
   .hero-image { max-width: 90%; }
 }
-@media (max-width: 768px) {
-  #about, #merchant, #marketing, #partners, #clients, #contact, #footer {
-    background-attachment: scroll; /* smoother, no grain */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+@media (max-height: 500px) and (orientation: landscape) {
+  #hero {
+    height: auto; /* don’t force full height */
+    padding: 20px;
   }
-}
-@media (max-width: 768px) {
-  #about, #merchant, #marketing, #partners {
-    padding: 10px; /* less vertical padding */
-  }
-}
-@media (max-width: 768px) {
-  section h2, section h3 {
-    font-size: 2rem; /* smaller headings for mobile */
-  }
-  section p {
-    font-size: 1.1rem; /* more readable on mobile */
-    line-height: 1.6;  /* improves readability */
+
+  .hero-card {
+    max-width: 80%;
+    aspect-ratio: 16/9;
   }
 }
 /* ========================
