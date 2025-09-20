@@ -83,7 +83,7 @@ footer p {
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-#about, #what {
+#about, #merchant, #marketing {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -93,13 +93,13 @@ footer p {
   background-size: cover;
   background-attachment: fixed;
 }
-.about-overlay h2, .what-overlay h2 {
+.about-overlay h2, .merchant-overlay h2, .marketing-overlay h2 {
   text-align: center;   /* centers the title */
 }
-.about-overlay p, .what-overlay p {
+.about-overlay p, .merchant-overlay p, .marketing-overlay p {
   text-align: justify;     /* aligns paragraph left */
 }
-.about-container, .what-container { 
+.about-container, .merchant-container, .marketing-container { 
   background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay for readability */ 
   align-items: center; 
   padding: clamp(30px, 5vw, 60px); 
