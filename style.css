@@ -358,7 +358,7 @@ footer p {
 ======================== */
 @media (max-width: 768px) {
   #hero { 
-     height: 100vh; 
+     min-height: 100vh; 
      padding: 20px; 
      display: flex;
      flex-direction: column;
@@ -369,7 +369,6 @@ footer p {
   .hero-title { 
      font-size: clamp(1.5rem, 6vw, 2rem); 
      letter-spacing: 0.3em; 
-     top: 15%; 
      position: relative;
      margin-bottom: 10px;
   }
@@ -377,7 +376,6 @@ footer p {
      font-size: clamp(0.9rem, 4vw, 1.2rem); 
      margin: 5px 0; 
      line-height: 1.3;
-     top: 30%
   }
   .hero-image { 
      max-width: 80%; 
