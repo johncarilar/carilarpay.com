@@ -170,7 +170,7 @@ footer p {
 
 /* HERO SUBTITLES */
 .hero-subtitles {
-  bottom: 15%;  /* positions subtitles near bottom of card */
+  bottom: 25%;  /* positions subtitles near bottom of card */
   transform: translateX(-50%);
   flex-direction: column;
   gap: 0em;
