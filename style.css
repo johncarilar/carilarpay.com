@@ -34,7 +34,7 @@ a:hover {
 /* ========================
    2. Layout & Sections
 ======================== */
-#about, #merchant, #marketing, #partners, #clients, #contact, #footer {
+#about, #merchant, #partners, #clients, #contact, #footer {
   font-family: 'Exo 2', sans-serif;
   width: 100%;
   padding: 30px;
@@ -85,7 +85,7 @@ footer p {
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
-#about, #merchant, #marketing {
+#about, #merchant {
   width: 100%;
   min-height: auto;
   display: flex;
@@ -95,13 +95,13 @@ footer p {
   background-size: cover;
   background-attachment: fixed;
 }
-.about-overlay h2, .merchant-overlay h2, .marketing-overlay h2 {
+.about-overlay h2, .merchant-overlay h2 {
   text-align: center;   /* centers the title */
 }
-.about-overlay p, .merchant-overlay p, .marketing-overlay p {
+.about-overlay p, .merchant-overlay p {
   text-align: justify;     /* aligns paragraph left */
 }
-.about-container, .merchant-container, .marketing-container { 
+.about-container, .merchant-container { 
   background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay for readability */ 
   align-items: center; 
   padding: clamp(30px, 5vw, 60px); 
@@ -392,13 +392,13 @@ footer p {
      text-align: center;
      padding: 5%;
   }
-   #about, #merchant, #marketing, #partners, #clients, #contact, #footer {
+   #about, #merchant, #partners, #clients, #contact, #footer {
     background-attachment: scroll; /* smoother, no grain */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
   }
-    #about, #merchant, #marketing, #partners {
+    #about, #merchant, #partners {
     padding: 10px; /* less vertical padding */
   }
     section h2, section h3 {
