@@ -266,6 +266,18 @@ p {
   justify-content: space-between;
   cursor: pointer;
   align-items: center;
+  color: #111 !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq-question:focus,
+.faq-question:active {
+  outline: none !important;
+  color: #111 !important;
+}
+
+.faq-item:hover .faq-question {
+  color: #111;
 }
 
 .faq-toggle {
