@@ -110,7 +110,7 @@ p {
 }
 
 /* ========================
-   4. Logos & Client Lists
+   4. Social Links & Our Clients
 ======================== */
 .socials-list, 
 .client-list {
@@ -154,7 +154,7 @@ p {
 }
 
 /* ========================
-   5. Body Columns
+   5. How we Help & How we Work
 ======================== */
 .help-text,
 .work-text {
@@ -244,7 +244,9 @@ p {
   }
 }
 
-/* FAQ Section */
+/* ========================
+   6. FAQ
+======================== */
 .faq-list {
   max-width: 650px;   /* adjust this number to taste */
   margin: 0 auto;     /* centers the list */
@@ -317,7 +319,9 @@ p {
   transform: rotate(45deg); /* turns + into × (modern look) */
 }
 
-/* Responsive: stack on smaller screens */
+/* ========================
+  7 . Mobile Adjustments
+======================== */
 @media (max-width: 768px) {
   .help-text {
     grid-template-columns: 1fr; /* single column */
@@ -334,7 +338,7 @@ p {
 }
 
 /* ========================
-   6. Call to Action Button
+   8. Call to Action Button
 ======================== */
 .cta-btn {
   display: inline-block;
@@ -362,7 +366,7 @@ p {
 }
 
 /* ========================
-   7. Contact Form
+   9. Contact Form
 ======================== */
 body {
   margin: 0;
@@ -469,7 +473,7 @@ button {
 }
 
 /* ========================
-   8. Thank You
+   10. Thank You
 ======================== */
 
 .thank-you-section {
