@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Call • Carilar Pay</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ <nav class="navbar">
+   <div class="nav1">
+     <img src="../images/CarilarLOGO.png" alt="Carilar Logo" class="carilar">
+  </div>
+ </nav>
+
+<section class="form-section">
+
+  <div class="form-card">
+
+    <h1>Request a Call</h1>
+    <p class="subtitle">
+      Tell us a little about your business.<br>We’ll reach out shortly.
+    </p>
+
+    <form action="https://formsubmit.co/carilarpay@gmail.com" method="POST" class="contact-form">
+
+      <label>Your Full Name *</label>
+      <input type="text" name="name" required>
+
+      <label>Your Business Name *</label>
+      <input type="text" name="company" required>
+
+      <label>Business Email *</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required>
+
+      <label>Website (optional)</label>
+      <input type="text" name="website">
+
+      <label>What made you reach out? *</label>
+      <textarea name="issue" required></textarea>
+
+      <label>How soon are you looking for a solution? *</label>
+      <select name="urgency" required>
+        <option value="" disabled selected>Select one</option>
+        <option>Immediately (this week)</option>
+        <option>Within 30 days</option>
+        <option>Just exploring options</option>
+      </select>
+
+      <input type="hidden" name="_next" value="https://carilarpay.com/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Submit →</button>
+
+    </form>
+
+  </div>
+</section>
+
+</body>
+</html>

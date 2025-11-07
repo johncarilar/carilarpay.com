@@ -1,0 +1,442 @@
+/* ========================
+   1. Global Styles
+======================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  color: #222;
+  scroll-behavior: smooth;
+  background-color: #f6f1ea;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat';
+}
+
+.accent {
+  font-family: 'Playball', cursive;
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ========================
+   2. Navbar
+======================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between; /* logo left, button right */
+  padding: 18px 60px;     /* increase left/right padding to give cushion */
+  box-sizing: border-box;
+  z-index: 1000;           /* above other content */
+}
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;  /* keeps content centered on large screens */
+  margin: 0 auto;
+}
+
+nav img.carilar {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+.lang-btn {
+  font-size: 0.95rem;
+  color: #111;
+  text-decoration: none;   /* remove underline */
+  border: 1px solid #d4d4d4;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transform: scale(1.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-btn:hover {
+  border-color: #111;
+  background: #f2f2f2;
+}
+
+
+.hero {
+  font-size: 2rem;
+  width: 100%;
+  max-width: 1200px;      /* matches navbar */
+  margin: 0 auto;
+  padding: 0 40px;        /* consistent left/right padding */
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+.hero p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ========================
+   3. Container / Section Layout
+======================== */
+.container {
+  width: 100%;    /* matches navbar */
+  padding: 0 40px;        /* consistent left/right padding */
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+
+
+/* Headings & text */
+.section-title {
+  font-family: 'Montserrat';
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ========================
+   4. Logos & Client Lists
+======================== */
+.socials-list, 
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.socials-list img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  text-decoration: none;
+}
+
+.client-list a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socials-list a:hover img,
+.client-list a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================
+   5. Body Columns
+======================== */
+.help-text,
+.work-text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;                             /* space between columns */
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.help1,
+.work1 {
+  background: #faf7f5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 250px;  /* ensures boxes don't get too small */
+  justify-content: center;
+  border-radius: 14px;
+  padding: 25px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Headings inside boxes */
+.help1 h3 {
+  margin-bottom: 12px;
+}
+
+.help-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  opacity: 0.85;
+  transition: transform .3s ease;
+}
+
+.work1:hover .work-icon {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.work-wrapper {
+  position: relative;
+  padding: 60px 0; /
+}
+
+.work-text {
+  position: relative;
+  z-index: 1; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  text-align: center;
+}
+
+.work1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.work-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.work-text {
+  position: relative;
+  z-index: 1; /* keeps boxes in front */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: stretch;
+  text-align: justify;
+}
+
+.why-text {
+  max-width: 450px;      /* keeps the text nicely contained */
+  margin: 0 auto;        /* centers the block on the page */
+  text-align: left;      /* aligns the text inside to the left */
+  margin-top: 20px;      /* some spacing after the title */
+  line-height: 1.7;
+}
+
+/* FAQ Section */
+.faq-list {
+  max-width: 650px;   /* adjust this number to taste */
+  margin: 0 auto;     /* centers the list */
+}
+
+.faq-item {
+  border-radius: 12px;
+  border-bottom: 1px solid #ddd;
+  padding: 14px 18px;
+  background: #faf7f5;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.faq-toggle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+/* Answer Animation (Smooth Slide) */
+.faq-answer {
+  max-height: 0;
+  font-size: 1rem;
+  text-align: justify;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.35s ease,
+    padding-top 0.45s ease;
+  line-height: 1.65;
+  color: #444;
+}
+
+.faq-answer.open {
+  opacity: 1;
+  padding-top: 14px;
+}
+
+.faq-toggle.rotate {
+  transform: rotate(45deg); /* turns + into × (modern look) */
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .help-text {
+    grid-template-columns: 1fr; /* single column */
+  }
+}
+
+/* ========================
+   6. Call to Action Button
+======================== */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #f6f1ea;
+}
+
+.cta-btn:hover {
+  transform: scale(1.2);
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  section.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+/* ========================
+   7. Contact Form
+======================== */
+body {
+  margin: 0;
+  background: #f6f1ea; /* Your brand background */
+  font-family: 'Montserrat', sans-serif;
+  color: #111;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+}
+
+.form-card {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.form-card h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.form-card .subtitle {
+  text-align: center;
+  color: #444;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  transition: border-color 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #111;
+  outline: none;
+  background: #fff;
+}
+
+.contact-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-logo { 
+  width: 140px; /* adjust size as needed */ 
+  display: block; 
+  margin-bottom: 25px; 
+}
+.contact-form button[type="submit"],
+.contactar button[type="submit"] {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+  background: #030303;
+}
