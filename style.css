@@ -440,3 +440,52 @@ button {
 #contact-form button[type="submit"]:hover {
   background: #030303;
 }
+
+/* ========================
+   8. Thank You
+======================== */
+
+.thank-you-section {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:60px 20px;
+  background:#f6f1ea;
+}
+
+.thank-you-container {
+  max-width:600px;
+  text-align:center;
+  background: #faf7f5;
+  padding: 14px 18px;
+}
+
+.thank-you-title {
+  font-size:2.4rem;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#111;
+}
+
+.thank-you-subtitles p {
+  font-size:1.15rem;
+  color:#444;
+  margin:6px 0;
+}
+
+.back-home-btn {
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 26px;
+  background:#111;
+  color:#fff;
+  border-radius:6px;
+  font-size:1rem;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+
+.back-home-btn:hover {
+  background:#333;
+}
