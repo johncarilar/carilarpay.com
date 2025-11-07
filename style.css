@@ -237,6 +237,12 @@ p {
   margin-top: 20px;      /* some spacing after the title */
   line-height: 1.7;
 }
+@media (max-width: 768px) {
+  .work-text {
+    grid-template-columns: 1fr; /* force single column */
+    gap: 20px;
+  }
+}
 
 /* FAQ Section */
 .faq-list {
