@@ -323,6 +323,15 @@ p {
     grid-template-columns: 1fr; /* single column */
   }
 }
+.phone-link {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
 
 /* ========================
    6. Call to Action Button
