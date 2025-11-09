@@ -377,7 +377,18 @@ p {
 }
 
 /* ========================
-   9. Contact Form
+   9. Footer
+======================== */
+.footer img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ========================
+   10. Contact Form
 ======================== */
 body {
   margin: 0;
@@ -484,7 +495,7 @@ button {
 }
 
 /* ========================
-   10. Thank You
+   11. Thank You
 ======================== */
 
 .thank-you-section {
