@@ -379,17 +379,38 @@ p {
 /* ========================
    9. Footer
 ======================== */
-.footer img {
-  max-height: 50px;
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #f6f1ea; /* optional: matches brand background */
+  color: #222;
+}
+
+.footer p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* space between logos */
+  margin-top: 10px;
+}
+
+.footer-logos img {
+  max-height: 40px;
   width: auto;
   object-fit: contain;
-  display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#footer img:hover {
+.footer-logos img:hover {
   transform: scale(1.2);
 }
+
 
 /* ========================
    10. Contact Form
