@@ -16,7 +16,7 @@ h1, h2, h3 {
 }
 
 .accent {
-  font-family: 'Cormorant Garamond', italic;
+  font-family: 'Cormorant Garamond';
   font-style: 'italic';
   font-size: 1.2em;
 }
