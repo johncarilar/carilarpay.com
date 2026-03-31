@@ -6,7 +6,6 @@
   <title>Solicite una llamada • Carilar</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="script.js"></script>
 </head>
 
 <body>
@@ -56,7 +55,7 @@
        <input type="text" name="issue_other" placeholder="Por favor especifique" id="issue-other-input">
     </div>
 
-       <label>Punto de venta acutal: *</label>
+       <label>Punto de venta actual: *</label>
 
       <div>
         <label><input type="radio" name="POS" value="Square" required> Square</label><br>
@@ -70,7 +69,7 @@
 
      <!-- Hidden field -->
      <div id="pos-other-text" style="display:none; margin-top:8px;">
-        <input type="text" name="issue_other" placeholder="Por favor especifique" id="pos-other-input">
+        <input type="text" name="pos_other" placeholder="Por favor especifique" id="pos-other-input">
      </div>
 
       <label>¿Cuál es tu volumen mensual promedio? *</label>
@@ -86,7 +85,7 @@
 
       <label>¿Qué tan pronto buscas una solución? *</label>
       <div>
-        <label><input type="radio" name="solution" value="Imediatamente (esta semana)" required> Imediatamente (esta semana)</label><br>
+        <label><input type="radio" name="solution" value="Inmediatamente (esta semana)" required> Inmediatamente (esta semana)</label><br>
         <label><input type="radio" name="solution" value="Dentro de 30 días"> Dentro de 30 días</label><br>
         <label><input type="radio" name="solution" value="Solo exploro opciones"> Solo exploro opciones</label><br>
      </div>
@@ -94,7 +93,6 @@
 
       <input type="hidden" name="_next" value="https://carilarpay.com/gracias.html">
       <input type="hidden" name="_captcha" value="false">
-      <form action="https://formspree.io/f/yourID" method="POST" data-netlify="false">
         <input type="hidden" name="_subject" value="New Lead - Carilar Pay">
 
       <button type="submit">Enviar →</button>
