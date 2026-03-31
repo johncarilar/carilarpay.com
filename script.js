@@ -1,4 +1,4 @@
-console.log("JS LOADED");
+
 // ===== Elements =====
 const showEmailBtn = document.getElementById('showEmail');
 const showPhoneBtn = document.getElementById('showPhone');
