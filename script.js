@@ -99,5 +99,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  <script>
+  const issueOtherRadio = document.getElementById('issue-other');
+  const issueOtherText = document.getElementById('issue-other-text');
+  const issueOtherInput = document.getElementById('issue-other-input');
+
+  const allIssueRadios = document.querySelectorAll('input[name="issue"]');
+
+  allIssueRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (issueOtherRadio.checked) {
+        issueOtherText.style.display = 'block';
+        issueOtherInput.required = true;
+      } else {
+        issueOtherText.style.display = 'none';
+        issueOtherInput.required = false;
+        issueOtherInput.value = '';
+      }
+    });
+  });
+</script>
+
 });
 
