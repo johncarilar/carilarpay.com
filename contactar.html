@@ -6,6 +6,7 @@
   <title>Solicite una llamada • Carilar</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -37,13 +38,54 @@
       <input type="email" name="email" required>
 
       <label>Número Telefónico *</label>
-      <input type="tel" name="phone" required>
-
-      <label>Sitio de Web (opcional)</label>
-      <input type="text" name="website">
+      <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10-digit phone number">
 
       <label>Qué te hizo contactarnos? *</label>
       <textarea name="issue" required></textarea>
+      
+      <label>¿Cuál es el mayor problema con tu punto de venta actual? *</label>
+
+      <div>
+        <label><input type="radio" name="issue" value="Las comisiones son muy altas" required> Las comisiones son muy altas</label><br>
+        <label><input type="radio" name="issue" value="El sistema es complicado"> El sistema es complicado</label><br>
+        <label><input type="radio" name="issue" value="El servicio al cliente es pesimo"> El servicio al cliente es pesimo</label><br>
+        <label><input type="radio" name="issue" value="Problemas con reportes/inventario"> Problemas con reportes/inventario</label><br>
+        <label><input type="radio" name="issue" value="Solo explorando opciones"> Solo explorando opciones</label><br>
+        <label><input type="radio" name="issue" value="Other" id="issue-other"> Otro</label>
+     </div>
+
+      <!-- Hidden field -->
+    <div id="issue-other-text" style="display:none; margin-top:8px;">
+       <input type="text" name="issue_other" placeholder="Please specify" id="issue-other-input">
+    </div>
+
+       <label>Punto de venta acutal: *</label>
+
+      <div>
+        <label><input type="radio" name="POS" value="Square" required> Square</label><br>
+        <label><input type="radio" name="POS" value="Focus"> Focus</label><br>
+        <label><input type="radio" name="POS" value="Toast"> Toast</label><br>
+        <label><input type="radio" name="POS" value="Clover"> Clover</label><br>
+        <label><input type="radio" name="POS" value="Solo efectivo (Zelle, CashAspp, Venmo, Paypal)"> Solo efectivo (Zelle, CashAspp, Venmo, Paypal)</label><br>
+        <label><input type="radio" name="POS" value="I don't have a POS"> I don't have a POS</label><br>
+        <label><input type="radio" name="POS" value="Other" id="pos-other"> Other</label>
+     </div>
+
+     <!-- Hidden field -->
+     <div id="pos-other-text" style="display:none; margin-top:8px;">
+        <input type="text" name="issue_other" placeholder="Please specify" id="pos-other-input">
+     </div>
+
+      <label>¿Cuál es tu volumen mensual promedio? *</label>
+
+     <div>
+        <label><input type="radio" name="volume" value="Menos de $5k" required> Menos de $5k</label><br>
+        <label><input type="radio" name="volume" value="$5k–$20k"> $5k–$20k</label><br>
+        <label><input type="radio" name="volume" value="$20k–$50k"> $20k–$50k</label><br>
+        <label><input type="radio" name="volume" value=" $50k-$100k"> $50k-$100k</label><br>
+        <label><input type="radio" name="volume" value="Mas de $100k"> Mas de $100k</label><br>
+     </div>
+
 
       <label>Qué tan pronto buscas una solución? *</label>
       <select name="urgency" required>
@@ -63,5 +105,7 @@
   </div>
 </section>
 
+  
+  <script src="script.js"></script>
 </body>
 </html>
