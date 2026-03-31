@@ -1,4 +1,3 @@
-
 // ===== Elements =====
 const showEmailBtn = document.getElementById('showEmail');
 const showPhoneBtn = document.getElementById('showPhone');
@@ -67,8 +66,6 @@ if (contactForm) {
     // Otherwise, allow submission (FormSubmit handles it)
   });
 }
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
   // ===== ISSUE FIELD =====
