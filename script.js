@@ -67,37 +67,6 @@ if (contactForm) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-
-  const faqQuestions = document.querySelectorAll('.faq-question');
-
-  faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-
-      const answer = question.nextElementSibling;
-      const toggle = question.querySelector('.faq-toggle');
-
-      // Close any other open FAQ items
-      document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
-        if (openAnswer !== answer) {
-          openAnswer.style.maxHeight = null;
-          openAnswer.classList.remove('open');
-          openAnswer.previousElementSibling.querySelector('.faq-toggle').classList.remove('rotate');
-        }
-      });
-
-      // Toggle clicked FAQ
-      if (answer.classList.contains('open')) {
-        answer.style.maxHeight = null;
-        answer.classList.remove('open');
-        toggle.classList.remove('rotate');
-      } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        answer.classList.add('open');
-        toggle.classList.add('rotate');
-      }
-    });
-  });
 
 document.addEventListener("DOMContentLoaded", function () {
 
