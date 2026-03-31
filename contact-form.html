@@ -39,19 +39,61 @@
       <label>Phone Number *</label>
       <input type="tel" name="phone" required>
 
-      <label>Website (optional)</label>
-      <input type="text" name="website">
+      
+      <label>What is your biggest issue with your current point of sale? *</label>
 
-      <label>What made you reach out? *</label>
-      <textarea name="issue" required></textarea>
+      <div>
+        <label><input type="radio" name="issue" value="Fees are too high" required> Fees are too high</label><br>
+        <label><input type="radio" name="issue" value="System is confusing"> System is confusing</label><br>
+        <label><input type="radio" name="issue" value="Slow checkout"> Slow checkout</label><br>
+        <label><input type="radio" name="issue" value="Poor support"> Customer support sucks</label><br>
+        <label><input type="radio" name="issue" value="Reporting/inventory issues"> Reporting/inventory issues</label><br>
+        <label><input type="radio" name="issue" value="Just exploring"> Just exploring options</label><br>
+        <label><input type="radio" name="issue" value="Other" id="issue-other"> Other</label>
+     </div>
+
+    <!-- Hidden field -->
+    <div id="issue-other-text" style="display:none; margin-top:8px;">
+       <input type="text" name="issue_other" placeholder="Please specify" id="issue-other-input">
+    </div>
+
+      <label>Current Point of Sale *</label>
+
+      <div>
+        <label><input type="radio" name="issue" value="Fees are too high" required> Square</label><br>
+        <label><input type="radio" name="issue" value="System is confusing"> Focus</label><br>
+        <label><input type="radio" name="issue" value="Slow checkout"> Toast</label><br>
+        <label><input type="radio" name="issue" value="Poor support"> Clover</label><br>
+        <label><input type="radio" name="issue" value="Reporting/inventory issues"> Cash only (Zelle, CashAspp, Venmo, Paypal)</label><br>
+        <label><input type="radio" name="issue" value="Just exploring"> I don't have a POS</label><br>
+        <label><input type="radio" name="issue" value="Other" id="issue-other"> Other</label>
+     </div>
+
+     <!-- Hidden field -->
+     <div id="issue-other-text" style="display:none; margin-top:8px;">
+        <input type="text" name="issue_other" placeholder="Please specify" id="issue-other-input">
+     </div>
+
+      
+     <label>What is your average monthly volume? *</label>
+
+     <div>
+        <label><input type="radio" name="issue" value="Fees are too high" required> Less than $5k</label><br>
+        <label><input type="radio" name="issue" value="System is confusing"> $5k–$20k</label><br>
+        <label><input type="radio" name="issue" value="Slow checkout"> $20k–$50k</label><br>
+        <label><input type="radio" name="issue" value="Poor support"> $50k-$100k</label><br>
+        <label><input type="radio" name="issue" value="Reporting/inventory issues"> More than $100k</label><br>
+     </div>
+     
 
       <label>How soon are you looking for a solution? *</label>
-      <select name="urgency" required>
-        <option value="" disabled selected>Select one</option>
-        <option>Immediately (this week)</option>
-        <option>Within 30 days</option>
-        <option>Just exploring options</option>
-      </select>
+
+      <div>
+        <label><input type="radio" name="issue" value="Fees are too high" required> Immediately (this week)</label><br>
+        <label><input type="radio" name="issue" value="System is confusing"> Within 30 days</label><br>
+        <label><input type="radio" name="issue" value="Slow checkout"> Just exploring options</label><br>
+     </div>
+      
 
       <input type="hidden" name="_next" value="https://carilarpay.com/thankyou.html">
       <input type="hidden" name="_captcha" value="false">
