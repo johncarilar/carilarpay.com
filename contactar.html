@@ -38,7 +38,7 @@
       <input type="email" name="email" required>
 
       <label>Número Telefónico *</label>
-      <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10-digit phone number">
+      <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="numero de telefono de 10 digitos">
 
       <label>Qué te hizo contactarnos? *</label>
       <textarea name="issue" required></textarea>
@@ -88,12 +88,12 @@
 
 
       <label>Qué tan pronto buscas una solución? *</label>
-      <select name="urgency" required>
-        <option value="" disabled selected>Seleccione uno</option>
-        <option>Imediatamente (esta semana)</option>
-        <option>Dentro de 30 días</option>
-        <option>Solo exploro opciones</option>
-      </select>
+      <div>
+        <label><input type="radio" name="solution" value="Imediatamente (esta semana)" required> Imediatamente (esta semana)</label><br>
+        <label><input type="radio" name="solution" value="Dentro de 30 días"> Dentro de 30 días</label><br>
+        <label><input type="radio" name="solution" value="Solo exploro opciones"> Solo exploro opciones</label><br>
+     </div>
+      
 
       <input type="hidden" name="_next" value="https://carilarpay.com/gracias.html">
       <input type="hidden" name="_captcha" value="false">
