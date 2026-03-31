@@ -99,15 +99,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ===== ISSUE FIELD =====
   const issueOtherRadio = document.getElementById('issue-other');
   const issueOtherText = document.getElementById('issue-other-text');
   const issueOtherInput = document.getElementById('issue-other-input');
+  const issueRadios = document.querySelectorAll('input[name="issue"]');
 
-  const allIssueRadios = document.querySelectorAll('input[name="issue"]');
-
-  allIssueRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
+  issueRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
       if (issueOtherRadio.checked) {
         issueOtherText.style.display = 'block';
         issueOtherInput.required = true;
@@ -118,7 +119,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-</script>
+
+  // ===== POS FIELD =====
+  const posOtherRadio = document.getElementById('pos-other');
+  const posOtherText = document.getElementById('pos-other-text');
+  const posOtherInput = document.getElementById('pos-other-input');
+  const posRadios = document.querySelectorAll('input[name="POS"]');
+
+  posRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      if (posOtherRadio.checked) {
+        posOtherText.style.display = 'block';
+        posOtherInput.required = true;
+      } else {
+        posOtherText.style.display = 'none';
+        posOtherInput.required = false;
+        posOtherInput.value = '';
+      }
+    });
+  });
 
 });
-
