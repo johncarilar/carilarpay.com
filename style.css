@@ -54,7 +54,7 @@ nav img.carilar {
   width: auto;
   object-fit: contain;
 }
-.img.carilar a:hover img {
+.home-btn a:hover img {
   transform: scale(1.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
